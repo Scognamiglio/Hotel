@@ -1,0 +1,52 @@
+<!doctype html> <html lang="fr">
+<head>
+	<meta charset="utf-8"> 
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0">
+	<script type="text/javascript" src="script.js"></script>
+	<title>hotel</title>
+	<link type="text/css" rel="stylesheet" href="style.css" />
+</head>
+<body>
+	<fieldset>
+		<legend>R&eacute;servation H&ocirc;tel R&T **</legend>
+		<form method="post" action="traitement.php">
+			<span><img id="img" src="RJ-45.jpg"></img></span></br>
+			<span id="t"><span id="inp"><label>Nom</label></span><span id="inp"><input type="text" name="nom"></input></span></span>
+			<span id="t"><span id="inp"><label>Prenom</label></span><span id="inp"><input type="text" name="prenom"></input></span></span>
+			<span id="t"><span id="inp"><label>Email</label></span><span id="inp"><input type="text" name="Email"></input></span></span>
+			<span id="t"><span id="inp"><label>Confirmer l'eMail</label></span><span id="inp"><input type="text" name="Email2" onblur="email(this.value);"></input></span></span>
+			<span id="t"><span id="inp"><label>Téléphone</label></span><span id="inp"><input type="text" name="tel"></input></span></span>
+			<span id="t"><span id="inp"><label>Date arrivée</label></span><span id="inp"><input type="date" name="Da"></input></span></span>
+			<span id="t"><span id="inp"><label>Date départ</label></span><span id="inp"><input type="date" name="Dd" onblur="date(this.value);"></input></span></span>
+			<span id="t"><span id="inp"><label>Nombre de nuit</label></span><span id="inp"><input type="text" name="Nbrn" readonly="readonly" ></input></span></span>
+			<span id="t"><span id="inp"><label>Type de chambre</label></span><span id="truc">
+				<select id="truc2" name="type" onchange="test(this.value)";>
+					<option>exemple</option>
+					<option>simple</option>
+					<option>double</option>
+					<option>appart</option>
+					<option>suite</option>
+				</select>
+			</span></span>
+			<span id="t"><span id="inp"><label>Nombre de personne</label></span><span id="inp" name="nbr">
+			
+				<input type="radio" name="radio" disabled value="1"></input>1
+				<input type="radio" name="radio" disabled value="2"></input>2
+				<input type="radio" name="radio" disabled value="3"></input>3
+				<input type="radio" name="radio" disabled value="4"></input>4
+				
+			</span></span>
+			<span id="t"><span id="inp"><label>Nombre de petits-déjeuners</label></span><span id="inp"><input type="text" name="miam"></input></span></span>
+			<span id="douleur"><span id="dinp"><label>Options</br class="cheat"></br class="cheat"></br class="cheat"></label></span><span id="dinp2">
+				
+				TV<input type="checkbox" name="check[]" value="TV"></input></br>
+				Minibar<input type="checkbox" name="check[]" value="Minibar"></input></br>
+				Balcon vue mer<input type="checkbox" name="check[]" value="Balcon vue mer"></input></br>
+				Place de parking<input type="checkbox" name="check[]" value="Place de parking"></input>
+				</span></span>
+				
+			<span id="t"><span id="inpb1"><button>Annuler</button></span><span id="inpb2"><input type="submit" value="Envoyer"></input></span></span>
+			
+		</br> 
+	</fieldset>
+</body>
